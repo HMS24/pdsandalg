@@ -81,7 +81,7 @@ class Solution:
         return duplicated_nums
 
 
-# Approach 4 list 當 hash map and Big(2n) == Big(n) 最符合題目要求
+# Approach 4 negative and n marking and Big(2n) == Big(n) 最符合題目要求
 """
 1. list as hash map
 2. 整數當索引，若第一次則乘上 -1，第二次則減數列長度
