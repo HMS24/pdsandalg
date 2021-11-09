@@ -99,7 +99,3 @@ class Solution_4:
             if nums[i] == nums[-1]:
                 return nums[-1]
         return nums[-2]
-
-
-nums = [4, 5, 6, 5]
-print(Solution_4().repeatedNTimes(nums))
