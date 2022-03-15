@@ -4,7 +4,7 @@ from typing import Optional
 
 # Approach 1 錯誤
 """
-沒有看清 input，以為是 node_list, [node, node]...
+沒有看清 input 以為是 node_list, [node, node]...
 
 原題 input 輸入
 ListNode{val: 1, next: ListNode{val: 2, next: ListNode{val: 3, next: ListNode{val: 4, next: ListNode{val: 5, next: None}}}}}
