@@ -61,7 +61,45 @@ class Solution_2:
         return prev
 
 
+# Approach 3 Iterative / Swapping
 """
+ListNode{val: 1, 
+    next: ListNode{val: 2, 
+        next: ListNode{val: 3, 
+            next: ListNode{val: 4, 
+                next: ListNode{val: 5, 
+                    next: None}}}}}
+
+1. 終止條件: 跑到 node(5), 也就是 next is None, 回傳 node(5)
+2. 遞迴: 遞迴 node.next
+3. 執行: node.next.next 指回自己(node)
+4. 執行遞迴
+5. 最後把 node(1) 指向 None
+"""
+
+class Solution_3:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:  
+        if head is None:
+            return head
+
+        def recursion(head):
+            if not head or head.next is None:
+                return head
+
+            tail = recursion(head.next)
+            head.next.next = head
+            return tail
+
+        tail = recursion(head)
+        head.next = None
+        return tail
+
+
+
+
+
+
+""" HELP
 印出 ListNodes
 """
 class ListNode:
