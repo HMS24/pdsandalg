@@ -1,6 +1,15 @@
 """https://leetcode.com/problems/reverse-linked-list/
 """
+
 from typing import Optional
+
+# Definition for singly-linked list.
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+
 
 # Approach 1 錯誤
 """
@@ -9,13 +18,6 @@ from typing import Optional
 原題 input 輸入
 ListNode{val: 1, next: ListNode{val: 2, next: ListNode{val: 3, next: ListNode{val: 4, next: ListNode{val: 5, next: None}}}}}
 """
-
-
-# Definition for singly-linked list.
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
 
 class Solution_1:
     """錯誤解法"""
@@ -30,6 +32,7 @@ class Solution_1:
             next_n.next = cur_n
 
         return head
+
 
 
 # Approach 2 Iterative / Swapping
@@ -61,7 +64,8 @@ class Solution_2:
         return prev
 
 
-# Approach 3 Iterative / Swapping
+
+# Approach 3 遞迴
 """
 ListNode{val: 1, 
     next: ListNode{val: 2, 
