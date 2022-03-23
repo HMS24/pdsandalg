@@ -13,6 +13,11 @@ class ListNode:
 
 # Approach1 Iterative
 """
+
+1. iterative nodes 算出 list 長度
+2. 算出各 group 需要的個數
+3. iterative 個數, 插進 ans [], 然後把最後一個 next 設為 None
+
 """
 
 class Solution_1:
