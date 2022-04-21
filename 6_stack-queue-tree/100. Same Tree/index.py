@@ -41,7 +41,6 @@ class Solution_1:
                 return False
         return True
 
-
     def getMaxHeight(self, root, h=0):
         leftHeight = self.getMaxHeight(root.left, h+1) if root.left else h
         rightHeight = self.getMaxHeight(root.right, h+1) if root.right else h
@@ -64,3 +63,17 @@ class Solution_1:
         else:
             nodes.extend([None]*(2**depth-1))
         return nodes
+
+# Approach 2 Recursion
+"""
+每個節點遞迴就好
+"""
+class Solution_2:
+    def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
+        if not p and not q:
+            return True
+        if not p or not q:
+            return False
+        if p.val != q.val:
+            return False
+        return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
