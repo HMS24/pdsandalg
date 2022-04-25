@@ -1,5 +1,5 @@
 * 6 tree
-    * [94 Binary Tree Inorder Traversal](./6_stack-queue-tree/94.%20Binary%20Tree%20Inorder%20Traversal/index.py) 
+    * [94 Binary Tree Inorder Traversal](./6_stack-queue-tree/94.%20Binary%20Tree%20Inorder%20Traversal/index.py)
         inorder traversal 使用 iterative ! 有點難想
         ref: Approach2 Iterate
     * [100 Same Tree](./6_stack-queue-tree/100.%20Same%20Tree/index.py)
