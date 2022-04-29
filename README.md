@@ -15,3 +15,4 @@
         2. 重新排序中序遍歷，再新增 balance tree!
     * [111. Minimum Depth of Binary Tree](./6_stack-queue-tree/111.%20Minimum%20Depth%20of%20Binary%20Tree/index.py)
         1. Approach 2 Recursion 深度優先 優化！
+* 7 recursion
