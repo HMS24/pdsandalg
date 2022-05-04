@@ -16,3 +16,8 @@
     * [111. Minimum Depth of Binary Tree](./6_stack-queue-tree/111.%20Minimum%20Depth%20of%20Binary%20Tree/index.py)
         1. Approach 2 Recursion 深度優先 優化！
 * 7 recursion
+    * [78. Subsets](./7_recursion/78.%20Subsets/index.py)
+        1. iteration
+            對每個元素 2 分法，有無該元素的概念
+        2. recursion
+            dfs 記錄走過的路徑
