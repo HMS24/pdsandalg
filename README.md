@@ -18,6 +18,11 @@
 * 7 recursion
     * [78. Subsets](./7_recursion/78.%20Subsets/index.py)
         1. iteration
-            對每個元素 2 分法，有無該元素的概念
+            構造 power set 有一套固定的思維, 從空集合開始, 選擇包含某個元素或者不包含, 每次選擇會增加 2 種可能, 因此會讓set 的數目不斷乘2 
         2. recursion
             dfs 記錄走過的路徑
+    * [236. Lowest Common Ancestor of a Binary Tree](./7_recursion/236.%20Lowest%20Common%20Ancestor%20of%20a%20Binary%20Tree/index.py)
+        1. recursion
+            dfs 想很久...
+            要傳進一個 res 當作找到路徑的結果
+            這樣判斷才不會找到又繼續跑
