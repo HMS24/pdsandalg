@@ -26,3 +26,8 @@
             dfs 想很久...
             要傳進一個 res 當作找到路徑的結果
             這樣判斷才不會找到又繼續跑
+    * [124. Binary Tree Maximum Path Sum](./7_recursion/124.%20Binary%20Tree%20Maximum%20Path%20Sum/index.py)
+        1. 模式很難辨識...
+        要從最少3個節點開始想
+        遞迴到最底層回傳 path
+        紀錄可能單邊出現的最大值
