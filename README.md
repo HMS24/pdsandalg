@@ -21,6 +21,8 @@
             構造 power set 有一套固定的思維, 從空集合開始, 選擇包含某個元素或者不包含, 每次選擇會增加 2 種可能, 因此會讓set 的數目不斷乘2 
         2. recursion
             dfs 記錄走過的路徑
+        3. backtracking
+            球池不斷丟球 > 判斷符合數量 > 取球
     * [236. Lowest Common Ancestor of a Binary Tree](./7_recursion/236.%20Lowest%20Common%20Ancestor%20of%20a%20Binary%20Tree/index.py)
         1. recursion
             dfs 想很久...

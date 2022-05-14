@@ -38,3 +38,29 @@ class Solution_2:
         res.append(path)
         for i in range(len(nums)):
             self.dfs(nums[i+1:], path+[nums[i]], res)
+
+# Approach 3 backtracking 回溯法
+"""
+將球丟進球池
+符合數量紀錄
+然後拿出一顆球
+再丟球進去
+類似窮舉
+"""
+
+class Solution_3:
+    def subsets(self, nums):
+        res = []
+        for k in range(len(nums)+1):
+            self.backtrack(nums, k, [], res)
+        return res
+
+    def backtrack(self, nums, k, curr, results):
+        if len(curr) == k:
+            results.append(curr[:])
+            return
+
+        for i in range(len(nums)):
+            curr.append(nums[i])
+            self.backtrack(nums[i+1:], k, curr, results)
+            curr.pop()
