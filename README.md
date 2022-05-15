@@ -25,18 +25,7 @@
             球池不斷丟球 > 判斷符合數量 > 取球
             時間複雜度:
                 不好估算，可以取大概即可  
-                e.g. nums = [1, 3, 9]  
-                準確的時間複雜度為 22 次！  
-                因為一直從頭開始窮舉
-                $$A = C_{0}^{3}+C_{0}^{3}+C_{1}^{3}+C_{0}^{3}+C_{1}^{3}+C_{2}^{3}+C_{0}^{3}+C_{1}^{3}+C_{2}^{3}+C_{3}^{3}  
-                = 4C_{0}^{3}+3C_{1}^{3}+2C_{2}^{3}+1C_{3}^{3}$$  
-                根據  
-                $$\sum_{k=0}^n C_{k}^{n} {x^n} = (1+x)^n$$  
-                $$B = \sum_{k=0}^n C_{k}^{n} {1^n} = (1+1)^n = {2}^n$$  
-                設 $$C = n {2}^n$$  
-                又
-                A < C
-                所以估大概時間複雜度為 $$n2^k$$
+                <img src="https://i.imgur.com/wLEFtDI.jpg" alt="_" width="480" height="200"/>
     * [236. Lowest Common Ancestor of a Binary Tree](./7_recursion/236.%20Lowest%20Common%20Ancestor%20of%20a%20Binary%20Tree/index.py)
         1. recursion
             dfs 想很久...
