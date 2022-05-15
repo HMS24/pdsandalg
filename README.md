@@ -23,7 +23,6 @@
             dfs 記錄走過的路徑
         3. backtracking
             球池不斷丟球 > 判斷符合數量 > 取球
-            :::warning
             時間複雜度:
                 不好估算，可以取大概即可  
                 e.g. nums = [1, 3, 9]  
@@ -38,7 +37,6 @@
                 又
                 A < C
                 所以估大概時間複雜度為 $$n2^k$$
-            :::
     * [236. Lowest Common Ancestor of a Binary Tree](./7_recursion/236.%20Lowest%20Common%20Ancestor%20of%20a%20Binary%20Tree/index.py)
         1. recursion
             dfs 想很久...
