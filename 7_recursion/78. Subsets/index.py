@@ -11,6 +11,8 @@ e.g. nums = [1, 2, 3]
 2^1 [] [1]
 2^2 [] [1] [2] [1, 2]
 2^3 [] [1] [2] [1, 2] [3] [1, 3] [2, 3] [1, 2, 3]
+時間複雜度: n2^n
+空間複雜度: n2^n
 """
 
 class Solution_1:
@@ -25,7 +27,9 @@ class Solution_1:
 dfs!
 將走過的路徑紀錄下來！
 持續往下走
-用 res 紀答案
+用 res 記答案
+時間複雜度: 2^k
+空間複雜度: n
 """
 
 class Solution_2:
@@ -46,6 +50,8 @@ class Solution_2:
 然後拿出一顆球
 再丟球進去
 類似窮舉
+時間複雜度: k2^k
+空間複雜度: n+1
 """
 
 class Solution_3:
@@ -64,3 +70,10 @@ class Solution_3:
             curr.append(nums[i])
             self.backtrack(nums[i+1:], k, curr, results)
             curr.pop()
+
+
+nums = [1, 3, 9]
+s = Solution_2()
+res = s.subsets(nums)
+print(res)
+print(count_)
