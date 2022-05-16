@@ -33,6 +33,9 @@
             這樣判斷才不會找到又繼續跑
     * [124. Binary Tree Maximum Path Sum](./7_recursion/124.%20Binary%20Tree%20Maximum%20Path%20Sum/index.py)
         1. 模式很難辨識...
-        要從最少3個節點開始想
-        遞迴到最底層回傳 path
-        紀錄可能單邊出現的最大值
+            要從最少3個節點開始想
+            遞迴到最底層回傳 path
+            紀錄可能單邊出現的最大值
+    * [77. Combinations](./7_recursion/77.%20Combinations/index.py)
+        1. backtracking 
+           [時間複雜度估算參考影片](https://youtu.be/q0s6m7AiM7o?t=288)
