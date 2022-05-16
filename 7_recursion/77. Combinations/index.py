@@ -15,6 +15,7 @@
 空間複雜度:
     不算 results 的話 k
     因為 curr 要存 k 個元素
+    算 results 的話 kC(n, k)
 """
 
 class Solution_1:
