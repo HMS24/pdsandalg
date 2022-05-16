@@ -43,7 +43,7 @@ class Solution_2:
         for i in range(len(nums)):
             self.dfs(nums[i+1:], path+[nums[i]], res)
 
-# Approach 3 backtracking 回溯法
+# Approach 3 backtracking
 """
 將球丟進球池
 符合數量紀錄
@@ -70,10 +70,3 @@ class Solution_3:
             curr.append(nums[i])
             self.backtrack(nums[i+1:], k, curr, results)
             curr.pop()
-
-
-nums = [1, 3, 9]
-s = Solution_2()
-res = s.subsets(nums)
-print(res)
-print(count_)
