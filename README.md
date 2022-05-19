@@ -39,3 +39,6 @@
     * [77. Combinations](./7_recursion/77.%20Combinations/index.py)
         1. backtracking 
            [時間複雜度估算參考影片](https://youtu.be/q0s6m7AiM7o?t=288)
+    * [40. Combination Sum II](./7_recursion/40.%20Combination%20Sum%20II/index.py)
+        1. backtracking
+            不算重複的話，要判斷當前元素是否等於前一個元素，但會連第一組也被排除，所以利用迴圈 i > 0 來達成。
