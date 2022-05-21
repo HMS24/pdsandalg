@@ -31,10 +31,6 @@ class Solution_1:
         return results
 
     def dfs(self, root, targetSum, path, pathSum, results):
-        if targetSum > 0 and pathSum > targetSum:
-            return
-        if targetSum < 0 and pathSum < targetSum:
-            return
         if pathSum == targetSum and not root.left and not root.right:
             results.append(path[:])
             return
