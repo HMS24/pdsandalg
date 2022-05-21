@@ -40,6 +40,41 @@ class Solution_1:
             self.dfs(root.right, targetSum, path+[root.right.val], pathSum+root.right.val, results)
 
 
+# Approach 2 iteration using queue
+"""
+把每個節點，路徑及總和先加好放進 queue
+從 root 到 leaf 由上往下算
+一個一個從 queue 取出判斷
+
+加總和等於目標值且無左右子樹:
+    放進 results
+有左子樹:
+    放進 queue
+有右子樹
+    放進 queue
+
+時間複雜度: 
+    要將 n 個數字都走訪過，需耗費 O (n)。
+空間複雜度:
+    用 queue 存所有節點的內容，需耗費 O (n)。
+"""
+class Solution_2:
+    def pathSum(self, root, targetSum):
+        results = []
+        queue = []
+        queue.append([root, [root.val], root.val])
+        while queue:
+            node, path, sum = queue.pop(0)
+            if sum == targetSum and not node.left and not node.right:
+                results.append(path)
+            if node.left:
+                queue.append([node.left, path+[node.left.val], sum+node.left.val])
+            if node.right:
+                queue.append([node.right, path+[node.right.val], sum+node.right.val])
+
+        return results
+
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -60,6 +95,6 @@ r = TreeNode(
     )
 )
 
-s = Solution_1()
+s = Solution_2()
 res = s.pathSum(r, 18)
 print(res)

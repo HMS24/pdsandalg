@@ -46,4 +46,9 @@
         1. Approach 1 dfs
             原本多了加總大於目標值即 return 的終止條件，但題目有包含負數，
             因此得完全跑完至 leaf node 才能判斷。
+        2. Approach 2 iteration using queue
+            把所有節點都算出需要的內容
+            放進 queue 裡再一個一個取出判斷
+            whu use queue?
+            因為要由上往下加走過的路徑
             
