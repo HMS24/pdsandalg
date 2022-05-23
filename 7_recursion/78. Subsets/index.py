@@ -50,8 +50,8 @@ class Solution_2:
 然後拿出一顆球
 再丟球進去
 類似窮舉
-時間複雜度: k2^k
-空間複雜度: n+1
+時間複雜度: n2^n
+空間複雜度: n
 """
 
 class Solution_3:
