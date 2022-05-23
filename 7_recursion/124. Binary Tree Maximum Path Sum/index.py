@@ -9,7 +9,7 @@ class TreeNode:
         self.right = right
 
 
-# Approach 1 recursioin
+# Approach 1 recursion
 """
 1. 有可能經過 root
 2. 在左邊或在右邊
