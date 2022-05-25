@@ -64,4 +64,9 @@
         放進 queue 裡再一個一個取出判斷
         whu use queue?
         因為要由上往下加走過的路徑
-        
+* [698. Partition to K Equal Sum Subsets](./7_recursion/698.%20Partition%20to%20K%20Equal%20Sum%20Subsets/index.py)
+    * Approach 1 backtracking
+        從第一個數字開始，由左到右放入桶子裡，若此桶子已放不下則放入下個桶子裡
+        接著再放入第二個數字，依此類推，直到放完所有數字。
+    * Approach 2 dfs
+        ...
