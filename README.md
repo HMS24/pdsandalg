@@ -45,28 +45,8 @@
         紀錄可能單邊出現的最大值
 
 * [77. Combinations](./7_recursion/77.%20Combinations/index.py)
-    * Approach 1 backtracking 
-        [時間複雜度估算參考影片](https://youtu.be/q0s6m7AiM7o?t=288)
-    * Approach 2 組合公式
-        * <img src="./files/77.JPG" alt="_" width="480" height="800"/>
-        * [公式複習](https://academy.snapask.com/zh-tw/post/C%E7%9A%84%E7%AE%97%E6%B3%95-55a915a257cf)
-    
 * [40. Combination Sum II](./7_recursion/40.%20Combination%20Sum%20II/index.py)
     * Approach 1 backtracking
         不算重複的話，要判斷當前元素是否等於前一個元素，但會連第一組也被排除，所以利用迴圈 i > 0 來達成。
-        
 * [113. Path Sum II](./7_recursion/113.%20Path%20Sum%20II/index.py)
-    * Approach 1 dfs
-        原本多了加總大於目標值即 return 的終止條件，但題目有包含負數，
-        因此得完全跑完至 leaf node 才能判斷。
-    * Approach 2 iteration using queue
-        把所有節點都算出需要的內容
-        放進 queue 裡再一個一個取出判斷
-        whu use queue?
-        因為要由上往下加走過的路徑
 * [698. Partition to K Equal Sum Subsets](./7_recursion/698.%20Partition%20to%20K%20Equal%20Sum%20Subsets/index.py)
-    * Approach 1 backtracking
-        從第一個數字開始，由左到右放入桶子裡，若此桶子已放不下則放入下個桶子裡
-        接著再放入第二個數字，依此類推，直到放完所有數字。
-    * Approach 2 dfs
-        ...

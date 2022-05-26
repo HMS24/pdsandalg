@@ -2,22 +2,6 @@
 """
 
 # Approach 1 backtracking
-"""
-時間複雜度: 
-    1. 最準確: C(n, 0)+C(n, 1)+C(n, k)
-    2. 相對準確: kC(n, k)
-                C(n, k) 組合結果
-                k 為決策樹的高度
-    3. 上限: kn^k
-            n 為決策樹的選擇
-            k 為決策樹的高度
-            再乘上 k 為 code 當中要 copy k 個元素 append 進 results
-空間複雜度:
-    不算 results 的話 k
-    因為 curr 要存 k 個元素
-    算 results 的話 kC(n, k)
-"""
-
 class Solution_1:
     def combine(self, n, k):
         results = []
@@ -34,14 +18,6 @@ class Solution_1:
             curr.pop()
 
 # Approach 2 組合公式
-"""
-時間複雜度:
-    ∵ 最壞情況每次 n 都會分 2 組遞迴
-    ∴ O (2 ^ n)
-空間複雜度:
-    function call stack 為樹的高度 O ( k ) 
-"""
-
 class Solution_2:
     def combine(self, n, k):
         if k == 1:
