@@ -46,7 +46,5 @@
 
 * [77. Combinations](./7_recursion/77.%20Combinations/index.py)
 * [40. Combination Sum II](./7_recursion/40.%20Combination%20Sum%20II/index.py)
-    * Approach 1 backtracking
-        不算重複的話，要判斷當前元素是否等於前一個元素，但會連第一組也被排除，所以利用迴圈 i > 0 來達成。
 * [113. Path Sum II](./7_recursion/113.%20Path%20Sum%20II/index.py)
 * [698. Partition to K Equal Sum Subsets](./7_recursion/698.%20Partition%20to%20K%20Equal%20Sum%20Subsets/index.py)
