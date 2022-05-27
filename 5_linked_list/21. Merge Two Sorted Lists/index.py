@@ -1,15 +1,7 @@
 """https://leetcode.com/problems/merge-two-sorted-lists/
 """
 
-# Definition for singly-linked list.
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
-
-
-
-# Approach1 Iterative
+# Approach 1 Iteration
 """
 新增 listnode 當指標
 比較兩個 listnode  的 val
@@ -30,34 +22,19 @@ class Solution_1:
             ptr = ptr.next
         ptr.next = list1 or list2
 
-        return head.next    
-        
+        return head.next
 
+# Approach 2 Recursion
+class Solution_2:
+    def mergeTwoLists(self, list1, list2):
+        if not list1 or not list2:
+            return list1 or list2
 
-""" HELP
-印出 ListNodes
-"""
-class ListNode:
-    def __init__(self, val):
-        self.next = None
-        self.val = val
+        small_node = list1
+        big_node = list2
+        if list1.val > list2.val:
+            small_node = list2
+            big_node = list1
 
-a = ListNode(1)
-b = ListNode(2)
-c = ListNode(3)
-d = ListNode(4)
-e = ListNode(5)
-
-a.next = b
-b.next = c
-c.next = d
-d.next = e
-
-def printList(cur: ListNode):
-    if cur:
-        print(cur.val, " -> ", end='')
-        printList(cur.next)
-    else:
-        print("None")
-        
-printList(a)
+        small_node.next = self.mergeTwoLists(small_node.next, big_node)
+        return small_node
