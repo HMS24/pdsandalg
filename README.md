@@ -1,3 +1,8 @@
+## 5 linked list
+* [21. Merge Two Sorted Lists](./5_linked_list/21.%20Merge%20Two%20Sorted%20Lists/index.py)
+    * iteration
+    * recursion
+
 ## 6 tree
 * [94 Binary Tree Inorder Traversal](./6_stack-queue-tree/94.%20Binary%20Tree%20Inorder%20Traversal/index.py)
     inorder traversal 使用 iterative ! 有點難想
@@ -45,6 +50,13 @@
         紀錄可能單邊出現的最大值
 
 * [77. Combinations](./7_recursion/77.%20Combinations/index.py)
+    * backtricking
+    * 組合公式
 * [40. Combination Sum II](./7_recursion/40.%20Combination%20Sum%20II/index.py)
+    * backtracking
+    * dfs
 * [113. Path Sum II](./7_recursion/113.%20Path%20Sum%20II/index.py)
+    * dfs
+    * iteration using queue
 * [698. Partition to K Equal Sum Subsets](./7_recursion/698.%20Partition%20to%20K%20Equal%20Sum%20Subsets/index.py)
+    * backtricking * 2
