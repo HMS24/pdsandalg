@@ -24,6 +24,10 @@ class Solution_1:
 
         return head.next
 
+"""
+一直想要兩兩比較 邏輯錯誤
+因爲 [9, 10, 12] [1, 2, 3]...
+"""
 # Approach 2 Recursion
 class Solution_2:
     def mergeTwoLists(self, list1, list2):
