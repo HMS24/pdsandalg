@@ -2,6 +2,9 @@
 * [21. Merge Two Sorted Lists](./5_linked_list/21.%20Merge%20Two%20Sorted%20Lists/index.py)
     * iteration
     * recursion
+* [148. Sort List](./5_linked_list/148.%20Sort%20List/index.py)
+    * recursion
+    * recursion improved
 
 ## 6 tree
 * [94 Binary Tree Inorder Traversal](./6_stack-queue-tree/94.%20Binary%20Tree%20Inorder%20Traversal/index.py)
