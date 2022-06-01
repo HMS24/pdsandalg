@@ -2,12 +2,6 @@
 """
 
 # Approach 1 Iteration
-"""
-新增 listnode 當指標
-比較兩個 listnode  的 val
-指標的 next 串接較小的..
-"""
-
 class Solution_1:
     def mergeTwoLists(self, list1, list2):
         head = ptr = ListNode(0)
@@ -24,10 +18,6 @@ class Solution_1:
 
         return head.next
 
-"""
-一直想要兩兩比較 邏輯錯誤
-因爲 [9, 10, 12] [1, 2, 3]...
-"""
 # Approach 2 Recursion
 class Solution_2:
     def mergeTwoLists(self, list1, list2):
