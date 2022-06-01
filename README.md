@@ -62,4 +62,7 @@
     * dfs
     * iteration using queue
 * [698. Partition to K Equal Sum Subsets](./7_recursion/698.%20Partition%20to%20K%20Equal%20Sum%20Subsets/index.py)
-    * backtricking * 2
+    * backtricking 1
+    * backtricking 2
+* [54. Spiral Matrix](./7_recursion/54.%20Spiral%20Matrix/index.py)
+    * recursion
