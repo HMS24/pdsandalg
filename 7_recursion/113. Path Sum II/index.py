@@ -21,6 +21,8 @@ class Solution_1:
         if pathSum == targetSum and not root.left and not root.right:
             results.append(path[:])
             return
+
+        # 在參數 copy 一份 list 不斷新增 list，對記憶體負擔較大。
         if root.left:
             self.dfs(root.left, targetSum, path+[root.left.val], pathSum+root.left.val, results)
         if root.right:
