@@ -1,9 +1,7 @@
 """https://leetcode.com/problems/sort-list/
 """
 
-# n^2
-# n
-# Approach 1 Recursion
+# Approach 1 暴力
 class Solution_1:
     def sortList(self, head):
         if not head or not head.next:
@@ -26,9 +24,7 @@ class Solution_1:
         head.next = sorted_head
         return first
 
-# nlogn
-# n
-# Approach 2 Recursion imporoved
+# Approach 2 重組
 class Solution_2:
     def sortList(self, head):
         if not head or not head.next:
@@ -65,6 +61,7 @@ class Solution_2:
 
         for k in range(n):
             if i == n_left:
+                # 直接 right 後面剩下的接過來，增加記憶體負擔
                 nums = nums[:k] + right[j:]
                 break
             elif j == n_right:
@@ -77,3 +74,46 @@ class Solution_2:
                 nums[k] = right[j]
                 j += 1
         return nums
+
+# Approach 3 top-down merge sort
+class Solution_3:
+    def sortList(self, head):
+        if not head or not head.next:
+            return head
+        
+        mid = self.getMidNode(head)
+
+        # 需要把 left 的尾巴切掉，否則會一直 recursion 
+        next_head = mid.next
+        mid.next = None
+
+        left = self.sortList(head)
+        right = self.sortList(next_head)
+
+        return self.mergeTwoList(left, right)
+
+    def getMidNode(self, head):
+        if not head or not head.next:
+            return head
+        
+        # 取得 mid 可以同時進行 ，使用 slow fast pointer
+        slow = head
+        fast = head
+        while fast.next and fast.next.next:
+            slow = slow.next
+            fast = fast.next.next
+    
+        return slow
+
+    def mergeTwoList(self, head1, head2):
+        if not head1 or not head2:
+            return head1 or head2
+        
+        small = head1
+        big = head2
+        if head1.val > head2.val:
+            small = head2
+            big = head1
+        small.next = self.mergeTwoList(small.next, big)
+
+        return small

@@ -3,8 +3,9 @@
     * iteration
     * recursion
 * [148. Sort List](./5_linked_list/148.%20Sort%20List/index.py)
-    * recursion
-    * recursion improved
+    * brute froce
+    * 重組
+    * top-down merge sort
 
 ## 6 tree
 * [94 Binary Tree Inorder Traversal](./6_stack-queue-tree/94.%20Binary%20Tree%20Inorder%20Traversal/index.py)
