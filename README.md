@@ -22,6 +22,7 @@
 
 * [111. Minimum Depth of Binary Tree](./6_stack-queue-tree/111.%20Minimum%20Depth%20of%20Binary%20Tree/index.py)
     1. Approach 2 Recursion 深度優先 優化！
+* [144. Binary Tree Preorder Traversal](./6_stack-queue-tree/144.%20Binary%20Tree%20Preorder%20Traversal/index.py)
 
 ## Recursion
 * [78. Subsets](./7_recursion/78.%20Subsets/index.py)
