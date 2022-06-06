@@ -1,13 +1,8 @@
-## 5 linked list
+## Linked-list
 * [21. Merge Two Sorted Lists](./5_linked_list/21.%20Merge%20Two%20Sorted%20Lists/index.py)
-    * iteration
-    * recursion
 * [148. Sort List](./5_linked_list/148.%20Sort%20List/index.py)
-    * brute froce
-    * 重組
-    * top-down merge sort
 
-## 6 tree
+## Tree
 * [94 Binary Tree Inorder Traversal](./6_stack-queue-tree/94.%20Binary%20Tree%20Inorder%20Traversal/index.py)
     inorder traversal 使用 iterative ! 有點難想
     ref: Approach2 Iterate
@@ -28,7 +23,7 @@
 * [111. Minimum Depth of Binary Tree](./6_stack-queue-tree/111.%20Minimum%20Depth%20of%20Binary%20Tree/index.py)
     1. Approach 2 Recursion 深度優先 優化！
 
-## 7 recursion
+## Recursion
 * [78. Subsets](./7_recursion/78.%20Subsets/index.py)
     * Approach 1 iteration
         * 構造 power set 有一套固定的思維, 從空集合開始, 選擇包含某個元素或者不包含, 每次選擇會增加 2 種可能, 因此會讓set 的數目不斷乘2 
@@ -54,16 +49,9 @@
         紀錄可能單邊出現的最大值
 
 * [77. Combinations](./7_recursion/77.%20Combinations/index.py)
-    * backtricking
-    * 組合公式
 * [40. Combination Sum II](./7_recursion/40.%20Combination%20Sum%20II/index.py)
-    * backtracking
-    * dfs
 * [113. Path Sum II](./7_recursion/113.%20Path%20Sum%20II/index.py)
-    * dfs
-    * iteration using queue
 * [698. Partition to K Equal Sum Subsets](./7_recursion/698.%20Partition%20to%20K%20Equal%20Sum%20Subsets/index.py)
-    * backtricking 1
-    * backtricking 2
+
+## Simulation
 * [54. Spiral Matrix](./7_recursion/54.%20Spiral%20Matrix/index.py)
-    * recursion

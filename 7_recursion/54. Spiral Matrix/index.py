@@ -65,3 +65,30 @@ class Solution_1:
 
         spiraled(0, 0)
         return results
+
+# Approach 2 電子圍籬
+class Solution_2:
+    def spiralOrder(self, matrix):
+        res = []
+        # column, row 逆著放之後減 1 較方便
+        size = [len(matrix[0]), len(matrix)]
+
+        # 右下左上的前進速度
+        speeds = [[0, 1], [1, 0], [0, -1], [-1, 0]]
+
+        # 首要方向
+        direction = 0
+
+        # 從 0 -1 開始走
+        x = 0
+        y = -1
+        count = size[direction % 2]
+        while count > 0:
+            for _ in range(count):
+                x += speeds[direction][0]
+                y += speeds[direction][1]
+                res.append(matrix[x][y])
+            direction = (direction + 1) % 4
+            size[direction % 2] -= 1
+            count = size[direction % 2]
+        return res
