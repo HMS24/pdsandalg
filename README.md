@@ -1,3 +1,7 @@
+## Search
+* [35. Search Insert Position](./2_search_and_sort/35.%20Search%20Insert%20Position/index.py)
+* [278. First Bad Version](./2_search_and_sort/278.%20First%20Bad%20Version/index.py)
+
 ## Linked-list
 * [21. Merge Two Sorted Lists](./5_linked_list/21.%20Merge%20Two%20Sorted%20Lists/index.py)
 * [148. Sort List](./5_linked_list/148.%20Sort%20List/index.py)
