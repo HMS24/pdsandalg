@@ -54,3 +54,16 @@ class Solution_2:
 
         results.append(child_node_vals)
         return self.getChildNodes(child_nodes, results)
+
+# Approach 3 Iterate
+class Solution_2:
+    def levelOrder(self, root):
+        if not root:
+            return []
+
+        res = []
+        levels = [root]
+        while levels:
+            res.append([level.val for level in levels])
+            levels = [node for level in levels for node in (level.left, level.right) if node]
+        return res
