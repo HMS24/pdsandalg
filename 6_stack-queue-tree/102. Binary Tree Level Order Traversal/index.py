@@ -2,7 +2,7 @@
 """
 
 # Approach 1 Recursion
-class Solution:
+class Solution_1:
     def levelOrder(self, root):
         ans = []
         if not root:
@@ -25,4 +25,32 @@ class Solution:
             self.getNodeValuesByDepth(depth-1, root.left, results)
         if root.right:
             self.getNodeValuesByDepth(depth-1, root.right, results)
-        
+
+# n
+# nlogn
+# Approach 2 Recursion improve
+class Solution_2:
+    def levelOrder(self, root):
+        if not root:
+            return []
+
+        nodes = [root]
+        results = [[root.val]]
+        return self.getChildNodes(nodes, results)
+
+    def getChildNodes(self, nodes, results):
+        child_nodes = []
+        child_node_vals = []
+        for node in nodes:
+            if node.left:
+                child_nodes.append(node.left)
+                child_node_vals.append(node.left.val)
+            if node.right:
+                child_nodes.append(node.right)
+                child_node_vals.append(node.right.val)
+
+        if not child_nodes:
+            return results
+
+        results.append(child_node_vals)
+        return self.getChildNodes(child_nodes, results)
