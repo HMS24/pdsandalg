@@ -42,31 +42,31 @@
     ref: Approach2 Iterate
 * [[100 Same Tree]](./07_tree//100.%20Same%20Tree/index.py)  [[Note]]()
     * 回傳物件要一致
-        在 depth == 0 時，不能只有 return  [[Note]]()
+        在 depth == 0 時，不能只有 return
         否則當 tree 只有 root １節點時會 runtime error
-    * 更好的方法：遞迴每個節點就好！！看 solution 才知道...  [[Note]]()
+    * 更好的方法：遞迴每個節點就好！！看 solution 才知道...
 * [[102. Binary Tree Level Order Traversal]](./07_tree//102.%20Binary%20Tree%20Level%20Order%20Traversal/index.py)  [[Note 未完]](https://hackmd.io/ccXwdNbHSx6s1s3LMj2NlQ)
 * [[104. Maximum Depth of Binary Tree]](./07_tree/104.%20Maximum%20Depth%20of%20Binary%20Tree/index.py)  [[Note]]()
 * [[111. Minimum Depth of Binary Tree]](./07_tree//111.%20Minimum%20Depth%20of%20Binary%20Tree/index.py)  [[Note]]()
     1. Approach 2 Recursion 深度優先 優化！
 * [[124. Binary Tree Maximum Path Sum]](./09_recursion//124.%20Binary%20Tree%20Maximum%20Path%20Sum/index.py)  [[Note]]()
     * Approach 1 recursion
-        模式很難辨識...  [[Note]]()
+        模式很難辨識...
         要從最少3個節點開始想
         遞迴到最底層回傳 path
         紀錄可能單邊出現的最大值
 * [[144. Binary Tree Preorder Traversal]](./07_tree//144.%20Binary%20Tree%20Preorder%20Traversal/index.py)  [[Note 未完]](https://hackmd.io/1b3OJV4cRCWS_j_kkIMBzQ)
 * [[236. Lowest Common Ancestor of a Binary Tree]](./09_recursion//236.%20Lowest%20Common%20Ancestor%20of%20a%20Binary%20Tree/index.py)  [[Note]]()
     * Approach 1 recursion
-        dfs 想很久...  [[Note]]()
+        dfs 想很久...
         要傳進一個 res 當作找到路徑的結果
         這樣判斷才不會找到又繼續跑
 * [[1382 Balance a Binary Search Tree]](./07_tree//1382.%20Balance%20a%20Binary%20Search%20Tree/index.py)  [[Note]]()
     * 一開始的方式不穩定，是錯誤的
       對每個節點算出左右子樹高度差，
-      然後辨別型態，再 rotate，  [[Note]]()
+      然後辨別型態，再 rotate，
       結果發現 root 不平衡。
-    * 重新排序中序遍歷，再新增 balance tree!  [[Note]]()
+    * 重新排序中序遍歷，再新增 balance tree!
 
 ## 08 Stack and Queue
 * [[0. queue_using_list]](./08_stack_and_queue/0.%20queue_using_list/index.py)  [[Note]]()
@@ -79,14 +79,14 @@
 * [[54. Spiral Matrix]](./09_recursion//54.%20Spiral%20Matrix/index.py)  [[Note]](https://hackmd.io/3em6KeTGTS2XTmhh5u3lmg)
 * [[77. Combinations]](./09_recursion//77.%20Combinations/index.py)  [[Note]](https://hackmd.io/0RYLEAdvSt-U1prTlR-74A)
 * [[78. Subsets]](./09_recursion//78.%20Subsets/index.py)  [[Note]]()
-    * Approach 1 iteration  [[Note]]()
+    * Approach 1 iteration
         * 構造 power set 有一套固定的思維, 從空集合開始, 選擇包含某個元素或者不包含, 每次選擇會增加 2 種可能, 因此會讓set 的數目不斷乘2 
-    * Approach 2 recursion  [[Note]]()
+    * Approach 2 recursion
         * dfs 記錄走過的路徑
-    * Approach 3 backtracking  [[Note]]()
-        * 球池不斷丟球 > 判斷符合數量 > 取球  [[Note]]()
+    * Approach 3 backtracking
+        * 球池不斷丟球 > 判斷符合數量 > 取球
         * 時間複雜度:
-            不好估算，可以取大概即可    [[Note]]()
+            不好估算，可以取大概即可
             <img src="https://i.imgur.com/wLEFtDI.jpg" alt="_" width="480" height="200"/>
 * [[113. Path Sum II]](./09_recursion//113.%20Path%20Sum%20II/index.py)  [[Note]](https://hackmd.io/XgQPsr40TO-y65ObjHhKpA)
 * [[698. Partition to K Equal Sum Subsets]](./09_recursion//698.%20Partition%20to%20K%20Equal%20Sum%20Subsets/index.py) [[Note 未完]](https://hackmd.io/wyFlT5PASsmaG-uMP2bEyQ)
