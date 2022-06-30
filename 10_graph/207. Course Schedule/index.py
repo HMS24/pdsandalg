@@ -42,7 +42,7 @@ class Solution_2:
         deps_dict = {}
         for target, need in prerequisites:
             if target in deps_dict:
-                deps_dict[target].append(need)ㄍ　「／討
+                deps_dict[target].append(need)
             else:
                 deps_dict[target] = [need]
                 
