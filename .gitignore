@@ -77,3 +77,6 @@ ENV/
 
 # Development mock data
 _mock*
+
+# pylint
+.pylintrc
