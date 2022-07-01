@@ -2,6 +2,7 @@
 * [[66. Plus One]](./01_preview/66.%20Plus%20One/index.py)
 
 ## 02 Search
+* [[33. Search in Rotated Sorted Array]](./02_search/33.%20Search%20in%20Rotated%20Sorted%20Array/index.py)
 * [[35. Search Insert Position]](./02_search/35.%20Search%20Insert%20Position/index.py)
 * [[278. First Bad Version]](./02_search/278.%20First%20Bad%20Version/index.py)
 * [[561. Array Partition I]](./02_search/561.%20Array%20Partition%20I/index.py)
