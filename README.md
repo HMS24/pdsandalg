@@ -8,6 +8,7 @@
 * [[561. Array Partition I]](./02_search/561.%20Array%20Partition%20I/index.py)
 * [[704. Binary Search]](./02_search/704.%20Binary%20Search/index.py)
 * [[852. Peak Index in a Mountain Array]](./02_search/852.%20Peak%20Index%20in%20a%20Mountain%20Array/index.py)
+* [1011. Capacity To Ship Packages Within D Days](./02_search/1011.%20Capacity%20To%20Ship%20Packages%20Within%20D%20Days/index.py)
 
 ## 03 String
 * [[344. Reverse String]](./03_string/344.%20Reverse%20String/index.py)
