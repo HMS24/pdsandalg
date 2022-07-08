@@ -131,3 +131,6 @@ class Solution4:
                 left = mid + 1
         return left
 ```
+
+## More
+https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/discuss/256729/JavaC%2B%2BPython-Binary-Search
