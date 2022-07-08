@@ -1,2 +1,2 @@
 ## 202207
-* [[1011. Capacity To Ship Packages Within D Days]](./02_search/1011.%20Capacity%20To%20Ship%20Packages%20Within%20D%20Days/index.py) [note](./02_search/1011.%20Capacity%20To%20Ship%20Packages%20Within%20D%20Days/note.md) 
+* [[1011. Capacity To Ship Packages Within D Days]](./02_search/1011.%20Capacity%20To%20Ship%20Packages%20Within%20D%20Days/index.py) [Note](./02_search/1011.%20Capacity%20To%20Ship%20Packages%20Within%20D%20Days/note.md) 
