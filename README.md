@@ -1,2 +1,3 @@
 ## 202207
 * [[1011. Capacity To Ship Packages Within D Days]](./02_search/1011.%20Capacity%20To%20Ship%20Packages%20Within%20D%20Days/index.py) [Note](./02_search/1011.%20Capacity%20To%20Ship%20Packages%20Within%20D%20Days/note.md) 
+* [33. Search in Rotated Sorted Array]](./02_search/33.%20Search%20in%20Rotated%20Sorted%20Array/index.py) [Note](./02_search/33.%20Search%20in%20Rotated%20Sorted%20Array/note.md)
