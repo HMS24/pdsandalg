@@ -1,10 +1,14 @@
-"""https://leetcode.com/problems/search-in-rotated-sorted-array/
-"""
+## Approach 1
 
-# Approach 1 binary search
+* 找到 pivot，分成正常排序的左右兩邊
+    * 若 pivot == 0，代表沒有翻轉直接 binary search
 
+* 判斷 target 與 nums[0] 大小
+    * 若 target > nums[0] binary search 找左邊
+    * 反之 binary search 找右邊
+        * 找右邊的時候得加上位移量 pivot
 
-class Solution1:
+```python
     def search(self, nums, target):
         pivot = self.__find_pivot(nums)
 
@@ -59,9 +63,24 @@ class Solution1:
             else:
                 end = mid - 1
         return -1
+```
 
+## Approach 2
 
-# Approach 2 binary search 判斷左右是否正常排序及目標值是否在範圍內
+將陣列切成兩邊，肯定會有一邊是正常排序一邊則是經過旋轉如圖：
+<div style="margin:30px 0px"><img src="./hint.JPG" alt="_note" width="50%" height="40%"/></div>
+
+* 找 mid 切成兩邊並與 left 比較
+    * 若 nums[mid] > nums[left]
+        代表左邊為正常排序，再判斷 target 是否在左邊
+        * 若 target in 左邊，則 binary search 左邊
+        * else，則繼續遞迴 search 右邊
+    * else
+        右邊正常排序
+        * target in 右邊？ binary search 右邊
+        * else，search 左邊
+
+```python
 class Soulution2:
     def search(self, nums, target):
         def search_helper(left, right):
@@ -95,3 +114,4 @@ class Soulution2:
 
         left, right = 0, len(nums)-1
         return search_helper(left, right)
+```
