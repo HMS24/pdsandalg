@@ -95,3 +95,40 @@ class Soulution2:
 
         left, right = 0, len(nums)-1
         return search_helper(left, right)
+
+# Approach 3 優化 approach 1
+
+
+class Solution3:
+    def search(self, nums, target):
+        pivot = self.__find_pivot(nums)
+        start, end = 0, len(nums)-1
+
+        while start <= end:
+            # 真正的 mid = (rotate mid + pivot) % len(nums)
+            rotate_mid = (start + end) // 2
+            mid = (rotate_mid + pivot) % len(nums)
+
+            if nums[mid] == target:
+                return mid
+            elif nums[mid] < target:
+                start = rotate_mid + 1
+            else:
+                end = rotate_mid - 1
+
+        return -1
+
+    @staticmethod
+    def __find_pivot(nums):
+        start, end = 0, len(nums) - 1
+
+        # 若大於 nums[end] 代表在第 1 段，移動 start
+        # 反之在第 2 段，移動 end
+        while start < end:
+            mid = (start + end) // 2
+
+            if nums[mid] > nums[end]:
+                start = mid + 1
+            else:
+                end = mid
+        return start
