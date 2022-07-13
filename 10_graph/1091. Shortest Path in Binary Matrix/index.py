@@ -3,6 +3,8 @@
 
 # Approach 1 dfs
 # Time Limit Exceeded
+
+
 class Solution_1:
     def shortestPathBinaryMatrix(self, grid):
         if grid[0][0] == 1 or grid[-1][-1] == 1:
@@ -16,14 +18,15 @@ class Solution_1:
             return n
 
         minimums = []
-        steps = [(-1, 0), (-1, 1), (0, 1), (1, 1), (1, 0), (1, -1), (0, -1), (-1, -1)]
+        steps = [(-1, 0), (-1, 1), (0, 1), (1, 1),
+                 (1, 0), (1, -1), (0, -1), (-1, -1)]
         visited = [[False for _ in range(n)] for _ in range(n)]
-        
+
         def walk(row, column, path=1):
             if (row, column) == (n-1, n-1):
                 minimums.append(path)
                 return
-            
+
             neighbors = []
             for step in steps:
                 x = row + step[0]
@@ -42,12 +45,14 @@ class Solution_1:
                 visited[x][y] = True
                 walk(x, y, path+1)
                 visited[x][y] = False
-            
+
         visited[0][0] = True
         walk(0, 0)
         return min(minimums) if minimums else -1
 
 # Approach 2 bfs
+
+
 class Solution_2:
     def shortestPathBinaryMatrix(self, grid):
         if grid[0][0] == 1 or grid[-1][-1] == 1:
@@ -58,12 +63,13 @@ class Solution_2:
                 break
         else:
             return n
-        
-        steps = [(-1, 0), (-1, 1), (0, 1), (1, 1), (1, 0), (1, -1), (0, -1), (-1, -1)]
+
+        steps = [(-1, 0), (-1, 1), (0, 1), (1, 1),
+                 (1, 0), (1, -1), (0, -1), (-1, -1)]
         visited = set()
         pathes = [(0, 0, 1)]
         visited.add((0, 0))
-        
+
         while pathes:
             row, column, shortest_path = pathes.pop(0)
             if (row, column) == (n-1, n-1):
