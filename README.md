@@ -65,6 +65,6 @@
 * [[113. Path Sum II]](./09_recursion//113.%20Path%20Sum%20II/index.py) - [Note](https://hackmd.io/XgQPsr40TO-y65ObjHhKpA)
 * [[698. Partition to K Equal Sum Subsets]](./09_recursion//698.%20Partition%20to%20K%20Equal%20Sum%20Subsets/index.py)
 ## 10 Graph
-* [[133. Clone Graph]](./08_graph//133.%20Clone%20Graph/index.py) - [20220713 Note](./10_graph/133.%20Clone%20Graph/note.md)
-* [[207. Course Schedule]](./08_graph/207.%20Course%20Schedule/index.py)
-* [[1091. Shortest Path in Binary Matrix]](./08_graph//1091.%20Shortest%20Path%20in%20Binary%20Matrix/index.py) - [20220714 Note](./10_graph/1091.%20Shortest%20Path%20in%20Binary%20Matrix/note.md)
+* [[133. Clone Graph]](./10_graph//133.%20Clone%20Graph/index.py) - [20220713 Note](./10_graph/133.%20Clone%20Graph/note.md)
+* [[207. Course Schedule]](./10_graph/207.%20Course%20Schedule/index.py)
+* [[1091. Shortest Path in Binary Matrix]](./10_graph//1091.%20Shortest%20Path%20in%20Binary%20Matrix/index.py) - [20220714 Note](./10_graph/1091.%20Shortest%20Path%20in%20Binary%20Matrix/note.md)
