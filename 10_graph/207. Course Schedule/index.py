@@ -3,6 +3,8 @@
 
 # Approach 1 dfs
 # Time Limit Exceeded
+
+
 class Solution_1:
     def canFinish(self, numCourses, prerequisites):
         # 利用 dict 紀錄依賴關係
@@ -12,7 +14,7 @@ class Solution_1:
                 deps_dict[need].append(take)
             else:
                 deps_dict[need] = [take]
-        
+
         # 輪流從每個節點開始，紀錄走過的 path，每個節點開始就清掉 path
         path = set()
         for target in range(numCourses):
@@ -26,7 +28,7 @@ class Solution_1:
             return False
         if target not in deps_dict:
             return True
-            
+
         # 輪流加入 dep dfs，但這樣走過的還會再走一次。
         for course in deps_dict[target]:
             path.add(course)
@@ -36,6 +38,8 @@ class Solution_1:
         return True
 
 # Approach 2 dfs - improved
+
+
 class Solution_2:
     def canFinish(self, numCourses, prerequisites):
         checked = set()
@@ -45,7 +49,7 @@ class Solution_2:
                 deps_dict[target].append(need)
             else:
                 deps_dict[target] = [need]
-                
+
         checking = set()
         for target in range(numCourses):
             checking.clear()
@@ -54,14 +58,17 @@ class Solution_2:
         return True
 
     def dfs(self, target, deps_dict, checking, checked):
+        # 已走過，無需再走
         if target in checked:
             return True
+        # 沒有先修課
         if target not in deps_dict:
             checked.add(target)
             return True
+        # 還沒 checked 就又走回頭路
         if target in checking:
             return False
-    
+
         checking.add(target)
         for dep_course in deps_dict[target]:
             if not self.dfs(dep_course, deps_dict, checking, checked):
@@ -71,10 +78,12 @@ class Solution_2:
         return True
 
 # Approach 3 bfs
+
+
 class Solution_3:
     def canFinish(self, numCourses, prerequisites):
         # deps == dependences, deped == depended
-        deps = [ [] for _ in range(numCourses)]
+        deps = [[] for _ in range(numCourses)]
         deped_count = [0 for _ in range(numCourses)]
 
         # 紀錄被依賴的次數 edge
@@ -87,7 +96,7 @@ class Solution_3:
         for course, count in enumerate(deped_count):
             if count == 0:
                 queue.append(course)
-        
+
         while queue:
             target = queue.pop(0)
             for dep in deps[target]:
@@ -100,4 +109,3 @@ class Solution_3:
             if count != 0:
                 return False
         return True
-            
