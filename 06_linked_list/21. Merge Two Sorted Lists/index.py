@@ -19,16 +19,14 @@ class Solution_1:
         return head.next
 
 # Approach 2 Recursion
-class Solution_2:
+
+
+class Solution2:
     def mergeTwoLists(self, list1, list2):
         if not list1 or not list2:
             return list1 or list2
 
-        small_node = list1
-        big_node = list2
-        if list1.val > list2.val:
-            small_node = list2
-            big_node = list1
+        (small, big) = (list1, list2) if list1.val < list2.val else (list2, list1)
+        small.next = self.mergeTwoLists(small.next, big)
 
-        small_node.next = self.mergeTwoLists(small_node.next, big_node)
-        return small_node
+        return small
