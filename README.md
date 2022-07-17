@@ -31,7 +31,7 @@
 
 ## 06 Linked List
 * [[2. Add Two Numbers]](./06_linked_list/2.%20Add%20Two%20Numbers/index.py)
-* [[21. Merge Two Sorted Lists]](./06_linked_list/21.%20Merge%20Two%20Sorted%20Lists/index.py) - [Note](https://hackmd.io/KzJHYRmRTdyfZA2xRfNMSw)
+* [[21. Merge Two Sorted Lists]](./06_linked_list/21.%20Merge%20Two%20Sorted%20Lists/index.py) - [20220712 Note](./06_linked_list/21.%20Merge%20Two%20Sorted%20Lists/note.md)
 * [[83. Remove Duplicates from Sorted List]](./06_linked_list/83.%20Remove%20Duplicates%20from%20Sorted%20List/index.py)
 * [[142. Linked List Cycle II]](./06_linked_list/142.%20Linked%20List%20Cycle%20II/index.py)
 * [[148. Sort List]](./06_linked_list/148.%20Sort%20List/index.py) - [Note](https://hackmd.io/xie4spD_T_KfNJhq18KpKQ)
