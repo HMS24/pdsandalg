@@ -2,7 +2,9 @@
 """
 
 # Approach 1 recursion
-class Solution_1:
+
+
+class Solution1:
     def spiralOrder(self, matrix):
         # 從第一個開始，先加入 results 及座標，螺旋時都只會判斷下一個
         first = matrix[0][0]
@@ -27,9 +29,9 @@ class Solution_1:
                     break
                 pathed_set.add(spot)
                 results.append(num)
-                # 記錄目前矩陣座標 
+                # 記錄目前矩陣座標
                 column = j
-            
+
             # 下 row+1 到 row 數量
             for i in range(row+1, m):
                 num = matrix[i][column]
@@ -48,7 +50,7 @@ class Solution_1:
                     break
                 pathed_set.add(spot)
                 results.append(num)
-                column = j            
+                column = j
 
             # 上 row-1 到 0，倒著數回來
             for i in range(row-1, 0-1, -1):
@@ -67,10 +69,13 @@ class Solution_1:
         return results
 
 # Approach 2 電子圍籬
-class Solution_2:
+
+
+class Solution2:
     def spiralOrder(self, matrix):
         res = []
-        # column, row 逆著放之後減 1 較方便
+        # size = [column, row]
+        # 一開始要走往右水平的，走幾步看 column
         size = [len(matrix[0]), len(matrix)]
 
         # 右下左上的前進速度
@@ -80,15 +85,17 @@ class Solution_2:
         direction = 0
 
         # 從 0 -1 開始走
-        x = 0
-        y = -1
+        (x, y) = (0, -1)
         count = size[direction % 2]
         while count > 0:
             for _ in range(count):
                 x += speeds[direction][0]
                 y += speeds[direction][1]
                 res.append(matrix[x][y])
+
+            # 走完水平，column 數 - 1
+            size[(direction + 1) % 2] -= 1
+            # 方向轉換
             direction = (direction + 1) % 4
-            size[direction % 2] -= 1
             count = size[direction % 2]
         return res
