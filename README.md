@@ -58,11 +58,11 @@
 
 ## 09 Recursion
 * [[24. Swap Nodes in Pairs]](./09_recursion/24.%20Swap%20Nodes%20in%20Pairs/index.py)
-* [[40. Combination Sum II]](./09_recursion//40.%20Combination%20Sum%20II/index.py) - [Note](https://hackmd.io/ZcK7IEXSTiiGGUUN7YXIsw)
-* [[54. Spiral Matrix]](./09_recursion//54.%20Spiral%20Matrix/index.py) - [Note](https://hackmd.io/3em6KeTGTS2XTmhh5u3lmg)
-* [[77. Combinations]](./09_recursion//77.%20Combinations/index.py) - [Note](https://hackmd.io/0RYLEAdvSt-U1prTlR-74A)
+* [[40. Combination Sum II]](./09_recursion//40.%20Combination%20Sum%20II/index.py)
+* [[54. Spiral Matrix]](./09_recursion//54.%20Spiral%20Matrix/index.py) -[[20220720 Note]](./09_recursion/54.%20Spiral%20Matrix/note.md)
+* [[77. Combinations]](./09_recursion//77.%20Combinations/index.py)
 * [[78. Subsets]](./09_recursion//78.%20Subsets/index.py)
-* [[113. Path Sum II]](./09_recursion//113.%20Path%20Sum%20II/index.py) - [Note](https://hackmd.io/XgQPsr40TO-y65ObjHhKpA)
+* [[113. Path Sum II]](./09_recursion//113.%20Path%20Sum%20II/index.py)
 * [[698. Partition to K Equal Sum Subsets]](./09_recursion//698.%20Partition%20to%20K%20Equal%20Sum%20Subsets/index.py)
 ## 10 Graph
 * [[133. Clone Graph]](./10_graph//133.%20Clone%20Graph/index.py) - [[20220713 Note]](./10_graph/133.%20Clone%20Graph/note.md)
