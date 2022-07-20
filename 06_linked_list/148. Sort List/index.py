@@ -1,8 +1,11 @@
 """https://leetcode.com/problems/sort-list/
 """
 
+from helper import ListNode
 # Approach 1 暴力
-class Solution_1:
+
+
+class Solution1:
     def sortList(self, head):
         if not head or not head.next:
             return head
@@ -18,14 +21,16 @@ class Solution_1:
             sorted_head = sorted_head.next
 
         if not prev:
-            head.next = sorted_head    
+            head.next = sorted_head
             return head
         prev.next = head
         head.next = sorted_head
         return first
 
 # Approach 2 重組
-class Solution_2:
+
+
+class Solution2:
     def sortList(self, head):
         if not head or not head.next:
             return head
@@ -34,15 +39,14 @@ class Solution_2:
         while head:
             nums.append(head.val)
             head = head.next
-        
+
         nums = self.mergeSort(nums)
         nums = [*map(ListNode, nums)]
-        
+
         for i in range(len(nums)-1):
             nums[i].next = nums[i+1]
 
         return nums[0]
-        
 
     def mergeSort(self, nums):
         if len(nums) == 1:
@@ -76,14 +80,16 @@ class Solution_2:
         return nums
 
 # Approach 3 top-down merge sort
-class Solution_3:
+
+
+class Solution3:
     def sortList(self, head):
         if not head or not head.next:
             return head
-        
+
         mid = self.getMidNode(head)
 
-        # 需要把 left 的尾巴切掉，否則會一直 recursion 
+        # 需要把 left 的尾巴切掉，否則會一直 recursion
         next_head = mid.next
         mid.next = None
 
@@ -95,20 +101,20 @@ class Solution_3:
     def getMidNode(self, head):
         if not head or not head.next:
             return head
-        
+
         # 取得 mid 可以同時進行 ，使用 slow fast pointer
         slow = head
         fast = head
         while fast.next and fast.next.next:
             slow = slow.next
             fast = fast.next.next
-    
+
         return slow
 
     def mergeTwoList(self, head1, head2):
         if not head1 or not head2:
             return head1 or head2
-        
+
         small = head1
         big = head2
         if head1.val > head2.val:
