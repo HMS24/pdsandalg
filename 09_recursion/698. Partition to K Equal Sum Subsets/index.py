@@ -2,37 +2,50 @@
 """
 
 # Approach 1 backtracking
-class Solution_1:
+
+
+class Solution1:
     def canPartitionKSubsets(self, nums, k):
         nums = sorted(nums, reverse=True)
-        if sum(nums) % k != 0:
-            return False
-        target = sum(nums) / k
-        buckets = [0] * k
-        return self.backtracking(buckets, nums, target)
 
-    def backtracking(self, buckets, nums, target , next_index=0):
-        if next_index == len(nums):
-            for num in buckets:
-                if num != target:
-                    return False
-            return True
-        for i in range(len(buckets)):
-            if buckets[i] + nums[next_index] <= target:
-                buckets[i] += nums[next_index]
-                if self.backtracking(buckets, nums, target, next_index+1):
+        target = sum(nums) // k
+        buckets = [0] * k
+
+        # 判斷哪一個 bucket 要加上目前的元素 nums[index]
+        def dfs(index):
+            # 如果已經放進所有元素到 buckets 裡了，檢查是否 value 相等
+            if index == len(nums):
+                return len(set(buckets)) == 1
+
+            # 對每一個 bucket
+            for i in range(k):
+                buckets[i] += nums[index]
+                if buckets[i] <= target and dfs(index+1):
                     return True
-                buckets[i] -= nums[next_index]
-        return False
+                buckets[i] -= nums[index]
+
+                # 將 nums[index] 放進 empty bucket[i]
+                # 嘗試將 index 之後 的 num 放進來卻都失敗
+                # 最後還把 nums[index] 移出 bucket
+                # 代表 nums[index] 即使放新的 empty bucket 也不會得到解答，提前 break
+                if buckets[i] == 0:
+                    break
+
+            return False
+
+        return dfs(0)
 
 # Approach 2 backtracking
-class Solution_2:
+
+
+class Solution2:
     def canPartitionKSubsets(self, nums, k):
+        # 沒有排序也可以，但有降冪排序的時候更快。因為再前幾個就能找到 curr_sum == target
         nums = sorted(nums, reverse=True)
         if sum(nums) % k != 0:
             return False
         target = sum(nums) / k
-        seens = [False] * len(nums)
+        visited = [False] * len(nums)
 
         def backtracking(k, start=0, curr_sum=0):
             if k == 1:
@@ -42,35 +55,11 @@ class Solution_2:
             if curr_sum == target:
                 return backtracking(k-1)
             for i in range(start, len(nums)):
-                if not seens[i]:
-                    seens[i] = True
+                if not visited[i]:
+                    visited[i] = True
                     if backtracking(k, i+1, curr_sum+nums[i]):
                         return True
-                    seens[i] = False
+                    visited[i] = False
             return False
 
         return backtracking(k)
-
-
-# # Approach 3 dfs
-# """
-# https://leetcode.com/problems/partition-to-k-equal-sum-subsets/discuss/146579/Easy-python-28-ms-beats-99.5
-
-# 時間複雜度: 
-
-# 空間複雜度:
-
-# """
-# class Solution_1:
-#     def canPartitionKSubsets(self, nums, k):
-#         nums.sort(reverse=True) # Game Changer 1
-#         buck, kSum = [0] * k, sum(nums) // k
-#         def dfs(idx):
-#             if idx == len(nums): return len(set(buck)) == 1
-#             for i in range(k):
-#                 buck[i] += nums[idx]
-#                 if buck[i] <= kSum and dfs(idx + 1): return True
-#                 buck[i] -= nums[idx]
-#                 if buck[i] == 0: break # Game Changer 2
-#             return False
-#         return dfs(0)
