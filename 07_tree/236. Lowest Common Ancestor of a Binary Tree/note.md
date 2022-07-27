@@ -1,24 +1,15 @@
-"""https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
-"""
+## Approach 1
 
+暴力解
 
-class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
+- 找兩個節點，並記錄路徑
+- 比較路徑長短
+- 依序從後開始判斷，短的路徑元素是否在長的路徑裡
+    - 若是就找到了
 
+速度太慢完全不推
 
-# Approach 1 recursioin
-"""
-找到兩個節點的路徑
-比較路徑長短
-依序從後判斷短的路徑元素是否在長的路徑
-若是就找到了
-但速度很慢...
-"""
-
-
+```python
 class Solution1:
     def lowestCommonAncestor(self, root, p, q):
         p_path = self.find_path(root, p)
@@ -47,10 +38,25 @@ class Solution1:
         res = []
         self.dfs([root], target, res)
         return res
+```
 
-# Approach 2
+#### 時間複雜度
+`find_path` $\mathcal{O}({n})$ `for ... if short in long: ...` $\mathcal{O}({n}^{2})$，為 $\mathcal{O}({n}^{2})$。
+#### 空間複雜度
+$\mathcal{O}({n}^{2})$。
 
+## Approach 2
 
+focus on one node!
+node 的 state 要如何變化？
+兩種狀況
+
+- 左右子樹分別找到 p and q，root 就是最低共同祖先，return root
+- 僅左或右子樹找到單ㄧ p or q，那麼 p or q 即是 solution，return p or q
+
+<div style="margin:30px 0px"><img src="./img.jpg" alt="_note" width="50%" height="40%"/></div>
+
+```python
 class Solution2:
     def lowestCommonAncestor(self, root, p, q):
         if not root:
@@ -64,22 +70,13 @@ class Solution2:
             return root
 
         return left or right
+```
 
+#### 時間複雜度:
+最壞情況要搜尋所有 node，每個 node 僅作 $\mathcal{O}{1}$ 的運算，綜上為 $\mathcal{O}{n}$。
+#### 空間複雜度:
+最壞情況 function call stack 是整棵樹的高度，$\mathcal{O}{n}$。
 
-r = TreeNode(
-    3,
-    TreeNode(
-        5,
-        TreeNode(6),
-        TreeNode(
-            2,
-            TreeNode(7),
-            TreeNode(4),
-        ),
-    ),
-    TreeNode(
-        1,
-        TreeNode(0),
-        TreeNode(8),
-    )
-)
+#### reference:
+https://www.youtube.com/watch?v=py3R23aAPCA
+    
