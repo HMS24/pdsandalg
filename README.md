@@ -45,7 +45,7 @@
 * [[104. Maximum Depth of Binary Tree]](./07_tree/104.%20Maximum%20Depth%20of%20Binary%20Tree/index.py)
 * [[105. Construct Binary Tree from Preorder and Inorder Traversal]](./07_tree/105.%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder%20Traversal/index.py) - [[20220712 Note]](./07_tree/105.%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder%20Traversal/note.md) 
 * [[111. Minimum Depth of Binary Tree]](./07_tree//111.%20Minimum%20Depth%20of%20Binary%20Tree/index.py)
-* [[124. Binary Tree Maximum Path Sum]](./09_recursion//124.%20Binary%20Tree%20Maximum%20Path%20Sum/index.py)
+* [[124. Binary Tree Maximum Path Sum]](./09_recursion//124.%20Binary%20Tree%20Maximum%20Path%20Sum/index.py) - [(20220728 Note)](./07_tree/124.%20Binary%20Tree%20Maximum%20Path%20Sum/note.md)
 * [[144. Binary Tree Preorder Traversal]](./07_tree//144.%20Binary%20Tree%20Preorder%20Traversal/index.py)
 * [[236. Lowest Common Ancestor of a Binary Tree]](./09_recursion//236.%20Lowest%20Common%20Ancestor%20of%20a%20Binary%20Tree/index.py) - [(20220727 Note)](./07_tree/236.%20Lowest%20Common%20Ancestor%20of%20a%20Binary%20Tree/index.py)
 * [[1382 Balance a Binary Search Tree]](./07_tree//1382.%20Balance%20a%20Binary%20Search%20Tree/index.py)
