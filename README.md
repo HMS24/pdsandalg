@@ -60,6 +60,7 @@
 * [[24. Swap Nodes in Pairs]](./09_recursion/24.%20Swap%20Nodes%20in%20Pairs/index.py)
 * [[40. Combination Sum II]](./09_recursion//40.%20Combination%20Sum%20II/index.py)
 * [[54. Spiral Matrix]](./09_recursion//54.%20Spiral%20Matrix/index.py) - [[20220720 Note]](./09_recursion/54.%20Spiral%20Matrix/note.md)
+* [[70. Climbing Stairs]](./09_recursion/70.%20Climbing%20Stairs/index.py)
 * [[77. Combinations]](./09_recursion//77.%20Combinations/index.py) - [[20220722 Note]](./09_recursion/77.%20Combinations/note.md)
 * [[78. Subsets]](./09_recursion//78.%20Subsets/index.py) - [(20220722 Note)](./09_recursion/78.%20Subsets/note.md)
 * [[113. Path Sum II]](./09_recursion//113.%20Path%20Sum%20II/index.py) - [[20220722 Note]](./09_recursion/113.%20Path%20Sum%20II/note.md)
