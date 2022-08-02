@@ -65,6 +65,7 @@
 * [[78. Subsets]](./09_recursion//78.%20Subsets/index.py) - [(20220722 Note)](./09_recursion/78.%20Subsets/note.md)
 * [[113. Path Sum II]](./09_recursion//113.%20Path%20Sum%20II/index.py) - [[20220722 Note]](./09_recursion/113.%20Path%20Sum%20II/note.md)
 * [[698. Partition to K Equal Sum Subsets]](./09_recursion//698.%20Partition%20to%20K%20Equal%20Sum%20Subsets/index.py) - [(20220725 Note)](./09_recursion/698.%20Partition%20to%20K%20Equal%20Sum%20Subsets/note.md)
+* [[746. Min Cost Climbing Stairs](./09_recursion/746.%20Min%20Cost%20Climbing%20Stairs/index.py)
 ## 10 Graph
 * [[133. Clone Graph]](./10_graph//133.%20Clone%20Graph/index.py) - [[20220713 Note]](./10_graph/133.%20Clone%20Graph/note.md)
 * [[207. Course Schedule]](./10_graph/207.%20Course%20Schedule/index.py) - [[20220716 Note]](./10_graph/207.%20Course%20Schedule/note.md)
