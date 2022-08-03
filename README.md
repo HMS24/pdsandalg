@@ -18,6 +18,7 @@
 * [[26. Remove Duplicates from Sorted Array]](./04_array/26.%20Remove%20Duplicates%20from%20Sorted%20Array/index.py)
 * [[287. Find the Duplicate Number]](./04_array/287.%20Find%20the%20Duplicate%20Number/index.py)
 * [[442. Find All Duplicates in an Array]](./04_array/442.%20Find%20All%20Duplicates%20in%20an%20Array/index.py)
+* [[53. Maximum Subarray]](./04_array/53.%20Maximum%20Subarray/index.py)
 
 ## 05 Map and Set
 * [[15. 3Sum]](./05_map_and_set/15.%203Sum/index.py)
