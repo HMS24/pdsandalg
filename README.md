@@ -73,3 +73,4 @@
 * [[1091. Shortest Path in Binary Matrix]](./10_graph//1091.%20Shortest%20Path%20in%20Binary%20Matrix/index.py) - [[20220714 Note]](./10_graph/1091.%20Shortest%20Path%20in%20Binary%20Matrix/note.md)
 ## 11 dp
 * [[518. Coin Change 2]](./11_dp/518.%20Coin%20Change%202/index.py)
+* [[1143. Longest Common Subsequence]](./11_dp/1143.%20Longest%20Common%20Subsequence/index.py)
