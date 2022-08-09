@@ -77,7 +77,8 @@ class Solution2:
 
         # row: 考慮第 row 個 coin for use
         # column: 該 row 所有 coin 組合出的 amount
-        ways_cache = [[0] * columns] * rows
+        # ways_cache = [[0] * columns] * rows ... 會影響到其他位置
+        ways_cache = [[0 for _ in range(columns)] for _ in range(rows)]
 
         # base case: 可以組合 amount=0 的方法只有 1 種 就是 empty set
         for row in range(rows):
