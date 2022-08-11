@@ -43,23 +43,14 @@ class Solution1:
     """
 
     def coinChange(self, coins, amount):
-        cache = [-1] * (amount+1)
+        cache = [amount+1] * (amount+1)
         # base case
         cache[0] = 0
 
-        for target_amount in range(1, amount+1):
-            for coin_val in coins:
-                # coin 無法組合 amount * 2 ways
-                if coin_val > target_amount:
-                    continue
-                if cache[target_amount-coin_val] < 0:
-                    continue
+        for target in range(1, amount+1):
+            for coin in coins:
+                if coin <= target:
+                    cache[target] = min(
+                        cache[target], 1+cache[target-coin])
 
-                with_coin_nums = 1 + cache[target_amount-coin_val]
-
-                if cache[target_amount] < 0:
-                    cache[target_amount] = with_coin_nums
-                else:
-                    cache[target_amount] = min(cache[target_amount], with_coin_nums)
-
-        return cache[amount]
+        return -1 if cache[amount] > amount else cache[amount]
