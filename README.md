@@ -75,5 +75,6 @@
 * [62. Unique Paths](./11_dp/62.%20Unique%20Paths/index.py)
 * [120. Triangle](./11_dp/120.%20Triangle/index.py)
 * [121. Best Time to Buy and Sell Stock](./11_dp/121.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock/index.py)
+* [322. Coin Change](./11_dp/322.%20Coin%20Change/index.py)
 * [[518. Coin Change 2]](./11_dp/518.%20Coin%20Change%202/index.py)
 * [[1143. Longest Common Subsequence]](./11_dp/1143.%20Longest%20Common%20Subsequence/index.py)
