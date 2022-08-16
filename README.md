@@ -78,3 +78,6 @@
 * [322. Coin Change](./11_dp/322.%20Coin%20Change/index.py)
 * [[518. Coin Change 2]](./11_dp/518.%20Coin%20Change%202/index.py)
 * [[1143. Longest Common Subsequence]](./11_dp/1143.%20Longest%20Common%20Subsequence/index.py)
+* [91. Decode Ways](./11_dp/91.%20Decode%20Ways/index.py)
+* [238. Product of Array Except Self](./11_dp/238.%20Product%20of%20Array%20Except%20Self/index.py)
+* [139. Word Break](./11_dp/139.%20Word%20Break/index.py)
