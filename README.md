@@ -79,13 +79,13 @@
 * [238. Product of Array Except Self](./11_dp/238.%20Product%20of%20Array%20Except%20Self/index.py)
 
 * [91. Decode Ways](./11_dp/91.%20Decode%20Ways/index.py)
-* [139. Word Break](./11_dp/139.%20Word%20Break/index.py)
 * [494. Target Sum](./11_dp/494.%20Target%20Sum/index.py)
 
 * [322. Coin Change](./11_dp/322.%20Coin%20Change/index.py)
 * [518. Coin Change 2](./11_dp/518.%20Coin%20Change%202/index.py)
 
 * [72. Edit Distance](./11_dp/72.%20Edit%20Distance/index.py)
+* [139. Word Break](./11_dp/139.%20Word%20Break/index.py)
 * [1143. Longest Common Subsequence](./11_dp/1143.%20Longest%20Common%20Subsequence/index.py)
 
 * [9999. 0-1 Knapsack Problem](./11_dp/9999.%200-1%20Knapsack%20Problem/index.py)
