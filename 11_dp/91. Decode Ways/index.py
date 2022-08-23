@@ -26,6 +26,17 @@ class Solution1:
                 1 character
                     2 2 3
                     pointer at empty string return 1
+
+            time complexity: 
+                如果沒有 memorized 每次 pointer 都會拆成 2 半
+                `O(2^n)`
+                不過因為加了 cache ，把子問題解決了等於 cut off tree 的一半，pointer 就跟 iteration 一樣
+                through all indices
+                `O(n)`
+
+            space complexity:
+                maintain 一個 list 及 n 個 O(1) work 的 function call stack
+                O(n)
         """
         n = len(s)
         cache = [-1] * n
