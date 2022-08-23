@@ -3,11 +3,20 @@
 
 
 class Solution1:
+    """
+    input
+    1 1 2 5
+        .
+    以 2 為例
+    before 就是 2 之前的元素 before[2] = 1*1
+    1 1 1 1
+    after 就是 2 之後的元素 5 after[2] = 5
+    1 1 5 1
+
+    output = before * after
+    
+    """
     def productExceptSelf(self, nums):
-        """
-        : type arr: list of int
-        : rtype: list of int
-        """
         n = len(nums)
         before = [1] * n
         after = [1] * n
