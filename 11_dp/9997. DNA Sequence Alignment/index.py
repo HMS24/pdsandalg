@@ -44,7 +44,9 @@ class Solution1:
         最糟情況序列均不同
         每對 pair 都要 call rec 3 次
         直到 base case 一方為 empty string
-        高度有 n 階 因此為 O(3^n)
+        高度有 n 階 
+        因此  the call stack increases exponentiall
+        漸進的時間 O(3^n)
     空間複雜度
         單純 function call 的 stack 深度 O(n)
         每個 node 僅為 O(1) 的 work
@@ -69,7 +71,6 @@ class Solution1:
                 return len(s1) - i
             if s1[i] == s2[j]:
                 return rec(i+1, j+1)
-
             # 3 種方法 s1 加 gap, s2 加 gap or just mismatch each other
             gap_s1 = self.GAP_COST + rec(i, j+1)
             gap_s2 = self.GAP_COST + rec(i+1, j)
