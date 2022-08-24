@@ -88,5 +88,6 @@
 * [139. Word Break](./11_dp/139.%20Word%20Break/index.py)
 * [1143. Longest Common Subsequence](./11_dp/1143.%20Longest%20Common%20Subsequence/index.py)
 * [9998. Longest Non-Decreasing Subsequence](./11_dp/9998.%20Longest%20Non-Decreasing%20Subsequence/index.py)
+* [9997. DNA Sequence Alignment](./11_dp/9997.%20DNA%20Sequence%20Alignment/index.py)
 
 * [9999. 0-1 Knapsack Problem](./11_dp/9999.%200-1%20Knapsack%20Problem/index.py)
