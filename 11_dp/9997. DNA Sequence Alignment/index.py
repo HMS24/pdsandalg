@@ -5,7 +5,13 @@ DNA Sequence Alignment
 https://www.youtube.com/watch?v=SYBmn3Q_S6s
 """
 
+
+# record count
+count1 = 0
+count2 = 0
 # recursion
+
+
 class Solution1:
     """
     e.g.
@@ -65,6 +71,8 @@ class Solution1:
         """
         def rec(i, j):
             # "", abc => 3
+            global count1
+            count1 += 1
             if i == len(s1):
                 return len(s2) - j
             if j == len(s2):
@@ -74,7 +82,7 @@ class Solution1:
             # 3 種方法 s1 加 gap, s2 加 gap or just mismatch each other
             gap_s1 = self.GAP_COST + rec(i, j+1)
             gap_s2 = self.GAP_COST + rec(i+1, j)
-            
+
             mismatch_pair = s1[i]+s2[j]
             mismatch = self.alignment_costs[mismatch_pair] + rec(i+1, j+1)
 
@@ -105,5 +113,86 @@ class Solution1:
         self.alignment_costs["GT"] = 1
         self.alignment_costs["TG"] = 1
 
+# recursion with memorized
+
+
+class Solution2:
+    """
+    時間複雜度
+        透過 memorized 幾乎一半的子樹都被砍了
+        相當於僅跑最左側的 path
+        為 O(n)
+    空間複雜度
+        除了 function call 的 stack 深度 O(n)
+        還有 dict 的各種 (i, j) 組合
+        O(m*n)
+    """
+    GAP_COST = 1
+    alignment_costs = {}
+
+    def __init__(self):
+        self.initialize_alignment_costs()
+
+    def min_cost_alignment(self, s1, s2):
+        """
+        :type s1: str
+        :type s2: str
+        :rtype: int
+        """
+        cache = dict()
+
+        def rec(i, j):
+            # "", abc => 3
+            global count2
+            count2 += 1
+            if i == len(s1):
+                return len(s2) - j
+            if j == len(s2):
+                return len(s1) - i
+            if s1[i] == s2[j]:
+                return rec(i+1, j+1)
+
+            if (i, j) in cache:
+                return cache[(i, j)]
+
+            # 3 種方法 s1 加 gap, s2 加 gap or just mismatch each other
+            gap_s1 = self.GAP_COST + rec(i, j+1)
+            gap_s2 = self.GAP_COST + rec(i+1, j)
+
+            mismatch_pair = s1[i]+s2[j]
+            mismatch = self.alignment_costs[mismatch_pair] + rec(i+1, j+1)
+
+            cache[(i, j)] = min(gap_s1, gap_s2, mismatch)
+            return cache[(i, j)]
+        return rec(0, 0)
+
+    def initialize_alignment_costs(self):
+        self.alignment_costs["AA"] = 0
+        self.alignment_costs["CC"] = 0
+        self.alignment_costs["GG"] = 0
+        self.alignment_costs["TT"] = 0
+
+        self.alignment_costs["AC"] = 1
+        self.alignment_costs["CA"] = 1
+
+        self.alignment_costs["AG"] = 2
+        self.alignment_costs["GA"] = 2
+
+        self.alignment_costs["AT"] = 4
+        self.alignment_costs["TA"] = 4
+
+        self.alignment_costs["CG"] = 3
+        self.alignment_costs["GC"] = 3
+
+        self.alignment_costs["CT"] = 5
+        self.alignment_costs["TC"] = 5
+
+        self.alignment_costs["GT"] = 1
+        self.alignment_costs["TG"] = 1
+
+
 if __name__ == "__main__":
     assert 3 == Solution1().min_cost_alignment("GACGTTA", "GAACGCTA")
+    assert 3 == Solution2().min_cost_alignment("GACGTTA", "GAACGCTA")
+    print(count1)  # 1131
+    print(count2)  # 62
