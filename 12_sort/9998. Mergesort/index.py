@@ -11,17 +11,22 @@ Mergesort
 
 
 class Solution:
+    """
+    split
+        - get_middle_node
+        - left = mergeSort(head)
+        - right = mergeSort(mid.next)
+    merge
+        - compare left right
+
+    [time complexity](./assets/mergesort.jpg)
+    """
+
     def mergeSort(self, head):
         '''
         :type head: ListNode
         :rtype: ListNode
         '''
-        # split
-        #     - get_middle_node
-        #     - left = mergeSort(head)
-        #     - right = mergeSort(mid.next)
-        # merge
-        #     - compare left right
         return self.split(head)
 
     def split(self, head):
