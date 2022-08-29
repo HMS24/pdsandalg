@@ -93,5 +93,6 @@
 * [9999. 0-1 Knapsack Problem](./11_dp/9999.%200-1%20Knapsack%20Problem/index.py)
 
 ## 11 sort
+* [9997.Heapsort](./12_sort/9997.%20Heapsort/index.py)
 * [9998.Mergesort](./12_sort/9998.%20Mergesort/index.py)
 * [9999.Quicksort](./12_sort/9999.%20Quicksort/index.py)
