@@ -39,6 +39,31 @@ class Solution:
     ...
     ...
     ...
+
+    [time complexity](./assets/mergesort.jpg)
+
+    非穩定排序，原先相等元素的順序可能會被打亂。
+
+    另外 quick sort 最差情況(順序或逆序)有可能為 O(n^2)
+    為何會有 quick sort 優於 merge sort 的說法？
+
+    首先再亂序的情況下，其實要出現剛好跑出 O(n^2) 的可能性不高
+    平均時間仍然為 O(nlogn)
+    其次是空間複雜度，利用 in-place 方式，也省去了要合併的操作
+    partition 的時候交換 pivot 跟 i 就做完合併了
+    因此空間複雜度僅看遞迴呼叫的次數。
+    最佳 O(logn) 最差 O(n)
+
+    結論
+    quick sort 有較佳的額外空間可以快取
+    且避免最差情況也很容易(透過 random select pivot)
+    另外還是要看 dataset 的 size(https://stackoverflow.com/questions/70402/why-is-quicksort-better-than-mergesort)
+    以及 swap(quick) or copy(merge) 的效率
+
+
+    如何優化
+    - randomly pivot
+    - balance pivot: 取前中後三個元素的中間值
     """
 
     def quicksort(self, nums):
