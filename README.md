@@ -93,6 +93,7 @@
 * [9999. 0-1 Knapsack Problem](./11_dp/9999.%200-1%20Knapsack%20Problem/index.py)
 
 ## 11 sort
+* [9994. Merge Overlapping Intervals](./12_sort/9994.%20Merge%20Overlapping%20Intervals/index.py)
 * [9995. Verifying Character Ordering](./12_sort/9995.%20Verifying%20Character%20Ordering/index.py)
 * [9996. Sort A K Sorted Array](./12_sort/9996.%20Sort%20A%20K%20Sorted%20Array/index.py)
 * [9997.Heapsort](./12_sort/9997.%20Heapsort/index.py)
