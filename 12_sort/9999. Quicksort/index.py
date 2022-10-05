@@ -92,6 +92,7 @@ class Solution:
         # i 記得比 pivot 小的最後一個位置
         # j scan whole list
         # 如果 j 掃到了，就先把 i+1 然後交換 i, j+1
+        # 找到 pivot 的位置
         i = left - 1
         for j in range(left, right):
             if nums[j] <= pivot:
